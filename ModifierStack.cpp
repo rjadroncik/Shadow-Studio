@@ -1,0 +1,33 @@
+// ModifierStack.cpp: implementation of the CModifierStack class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "ModifierStack.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CModifierStack::CModifierStack()
+{
+
+}
+
+CModifierStack::~CModifierStack()
+{
+
+}
+
+/*
+
+CModifierStack::AddModifier( UINT Type )
+{
+
+
+
+
+
+}
+
+*/

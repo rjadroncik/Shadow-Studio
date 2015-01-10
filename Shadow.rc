@@ -1,0 +1,808 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Slovak resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SKY)
+#ifdef _WIN32
+LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl + N",              IDM_FILE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Load\tCtrl + L",             IDM_FILE_LOAD
+        MENUITEM "&Save\tCtrl + S",             IDM_FILE_SAVE
+        MENUITEM "Save &As...",                 IDM_FILE_SAVE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Import\tCtrl + I",           IDM_FILE_IMPORT
+        MENUITEM "&Export\tCtrl + E",           IDM_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Viewports",                  IDM_OPTIONS_VIEWS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 162, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION " Version 0.670b"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "March 2004",IDC_STATIC,10,80,87,8
+    CONTROL         "So What !",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,117,
+                    79,38,13
+    CONTROL         174,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,116,
+                    31,41,42,WS_EX_STATICEDGE
+    LTEXT           "nehe.gamedev.net, developer.nvidia.com, gametutorials.com, opengl.org, builder.cz ",
+                    IDC_STATIC,10,44,87,31
+    LTEXT           "Special Thanks to:",IDC_STATIC,10,33,87,8
+    CONTROL         175,IDC_STATIC,"Static",SS_BITMAP,1,1,160,25
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,5,31,103,61
+END
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 81, 5
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_MAINTAB DIALOG DISCARDABLE  0, 0, 140, 12
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Create",IDC_TAB_CREATE,"Button",BS_OWNERDRAW | BS_ICON | 
+                    WS_TABSTOP,3,1,27,11
+    CONTROL         "Modify",IDC_TAB_MODIFY,"Button",BS_OWNERDRAW | BS_ICON | 
+                    WS_TABSTOP,31,1,25,11
+    CONTROL         "Motion",IDC_TAB_MOTION,"Button",BS_OWNERDRAW | BS_ICON | 
+                    WS_TABSTOP,57,1,25,11
+    CONTROL         "Utility",IDC_TAB_UTILITY,"Button",BS_OWNERDRAW | 
+                    BS_ICON | WS_TABSTOP,113,1,22,11
+    CONTROL         "Display",IDC_TAB_DISPLAY,"Button",BS_OWNERDRAW | 
+                    BS_ICON | WS_TABSTOP,83,1,29,11
+END
+
+IDD_CREATE_BOX DIALOG DISCARDABLE  0, 0, 140, 99
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Properties",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    GROUPBOX        "Tasselation: ",IDC_STATIC,4,14,64,55
+    LTEXT           "X:",IDC_STATIC,8,26,8,8
+    LTEXT           "Y:",IDC_STATIC,8,40,8,8
+    LTEXT           "Z:",IDC_STATIC,8,54,8,8
+    EDITTEXT        IDC_TASSELLATION_X,16,24,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_TASSELLATION_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,24,10,
+                    12
+    EDITTEXT        IDC_TASSELLATION_Y,16,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_TASSELLATION_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,38,10,
+                    12
+    EDITTEXT        IDC_TASSELLATION_Z,16,52,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_TASSELLATION_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,52,10,
+                    12
+    GROUPBOX        "Dimensions: ",IDC_STATIC,71,14,64,55
+    LTEXT           "X:",IDC_STATIC,75,26,8,8
+    LTEXT           "Y:",IDC_STATIC,75,40,8,8
+    LTEXT           "Z:",IDC_STATIC,75,54,8,8
+    EDITTEXT        IDC_DIMENSION_X,83,24,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMENSION_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,24,
+                    10,12
+    EDITTEXT        IDC_DIMENSION_Y,83,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMENSION_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,38,
+                    10,12
+    EDITTEXT        IDC_DIMENSION_Z,83,52,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMENSION_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,52,
+                    10,12
+    CONTROL         "Create",IDC_CREATE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,106,83,30,12
+    CONTROL         "Start in Center",IDC_CREATION_CENTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,79,73,58,8
+    CONTROL         "Create",IDC_CREATE_DATA,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,4,83,30,12
+    LTEXT           "Build from Data:",IDC_STATIC,4,73,51,8
+END
+
+IDD_OBJECT_TRANSFORMS DIALOG DISCARDABLE  0, 0, 140, 130
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Transformations",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    GROUPBOX        "Position:",IDC_STATIC,4,14,64,55
+    EDITTEXT        IDC_OBJECT_POS_X,16,24,36,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,8,26,8,8
+    LTEXT           "Y:",IDC_STATIC,8,40,8,8
+    LTEXT           "Z:",IDC_STATIC,8,54,8,8
+    GROUPBOX        "Rotation:",IDC_STATIC,71,14,64,55
+    LTEXT           "X:",IDC_STATIC,75,26,8,8
+    LTEXT           "Y:",IDC_STATIC,75,40,8,8
+    LTEXT           "Z:",IDC_STATIC,75,54,8,8
+    GROUPBOX        "Scale:",IDC_STATIC,4,70,64,55
+    LTEXT           "X:",IDC_STATIC,8,82,8,8
+    LTEXT           "Y:",IDC_STATIC,8,96,8,8
+    LTEXT           "Z:",IDC_STATIC,8,110,8,8
+    GROUPBOX        "Origin: ",IDC_STATIC,71,70,64,55
+    LTEXT           "X:",IDC_STATIC,75,82,8,8
+    LTEXT           "Y:",IDC_STATIC,75,96,8,8
+    LTEXT           "Z:",IDC_STATIC,75,110,8,8
+    CONTROL         "Spin1",IDC_OBJECT_POS_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,24,10,
+                    12
+    EDITTEXT        IDC_OBJECT_TRANSFORMS_POS_Y,16,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_POS_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,38,10,
+                    12
+    EDITTEXT        IDC_OBJECT_POS_Z,16,52,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_POS_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,52,10,
+                    12
+    EDITTEXT        IDC_OBJECT_ROT_X,83,24,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ROT_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,24,
+                    10,12
+    EDITTEXT        IDC_OBJECT_ROT_Y,83,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ROT_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,38,
+                    10,12
+    EDITTEXT        IDC_OBJECT_ROT_Z,83,52,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ROT_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,52,
+                    10,12
+    EDITTEXT        IDC_OBJECT_SCALE_X,16,80,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_SCALE_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,80,10,
+                    12
+    EDITTEXT        IDC_OBJECT_SCALE_Y,16,94,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_SCALE_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,94,10,
+                    12
+    EDITTEXT        IDC_OBJECT_SCALE_Z,16,108,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_SCALE_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,108,
+                    10,12
+    EDITTEXT        IDC_OBJECT_ORIGIN_X,83,80,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ORIGIN_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,80,
+                    10,12
+    EDITTEXT        IDC_OBJECT_ORIGIN_Y,83,94,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ORIGIN_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,94,
+                    10,12
+    EDITTEXT        IDC_OBJECT_ORIGIN_Z,83,108,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_OBJECT_ORIGIN_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,108,
+                    10,12
+END
+
+IDD_OPTIONS_VIEWS DIALOGEX 0, 0, 153, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Viewports"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,122,114,26,
+                    12
+    GROUPBOX        "OpenGL:",IDC_STATIC,3,3,84,81
+    COMBOBOX        IDC_VIEW_COLOR_BITS,55,14,29,36,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Color Depth:",IDC_STATIC,13,16,40,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_VIEW_DEPTH_BITS,55,30,29,46,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Z Depth:",IDC_STATIC,23,32,29,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_VIEW_STENCIL_BITS,55,46,29,36,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Stencil Depth:",IDC_STATIC,7,48,46,8,0,WS_EX_RIGHT
+    LTEXT           "Changes will apply after restarting! ",IDC_STATIC,7,65,
+                    77,18
+    GROUPBOX        "Display ( F3 ):",IDC_STATIC,93,3,56,41
+    CONTROL         "Shaded",IDC_VIEW_SHADED,"Button",BS_AUTORADIOBUTTON,97,
+                    13,41,10
+    CONTROL         "Wireframe",IDC_VIEW_WIREFRAME,"Button",
+                    BS_AUTORADIOBUTTON,97,22,48,10
+    CONTROL         "Composite",IDC_VIEW_COMPOSITE,"Button",
+                    BS_AUTORADIOBUTTON,97,32,49,10
+    CONTROL         "1",IDC_VIEW0,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,93,47,27,18
+    CONTROL         "2",IDC_VIEW1,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,122,47,27,18
+    CONTROL         "3",IDC_VIEW2,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,93,66,27,18
+    CONTROL         "4",IDC_VIEW3,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,122,66,27,18
+    GROUPBOX        "General:",IDC_STATIC,3,86,99,41
+    EDITTEXT        IDC_VIEW_DISTANCE,59,110,37,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "View Distance:",IDC_STATIC,9,112,48,8
+    CONTROL         "Update on Dialog Move",IDC_VIEW_UPDATE_ON_DIALOG_MOVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,96,91,11
+END
+
+IDD_MODIFIER_SELECT DIALOGEX 0, 0, 140, 118
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Modifier List",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    COMBOBOX        IDC_MODIFIER_LIST,4,14,131,248,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tree1",IDC_MODIFIER_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_SHOWSELALWAYS | TVS_CHECKBOXES | 
+                    TVS_NOSCROLL | WS_TABSTOP,4,31,131,83,WS_EX_CLIENTEDGE
+END
+
+IDD_OBJECT_INFO DIALOG DISCARDABLE  0, 0, 140, 31
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Name and Color",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    EDITTEXT        IDC_OBJECT_INFO_NAME,4,14,115,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OBJECT_INFO_COLOR,"Button",BS_OWNERDRAW | 
+                    BS_MULTILINE | BS_NOTIFY | WS_TABSTOP,122,14,13,12
+END
+
+IDD_OBJECT_COLOR DIALOG DISCARDABLE  0, 0, 275, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a color"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,244,100,26,
+                    12
+    LTEXT           "Base Palette:",IDC_STATIC,3,5,43,8
+    LTEXT           "User Palette:",IDC_STATIC,4,86,42,8
+    CONTROL         "",IDC_SELECT_BY_COLOR,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,248,82,16,14
+END
+
+IDD_MAINTOOLBAR DIALOGEX 0, 0, 541, 17
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Select Object",IDC_SELECT,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,112,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Select and Move",IDC_EDIT_MOVE,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,253,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Select and Rotate",IDC_EDIT_ROTATE,"Button",
+                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,273,0,19,17,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Select and Scale",IDC_EDIT_SCALE,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,293,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Undo",IDC_UNDO,"Button",BS_OWNERDRAW | WS_TABSTOP,0,0,
+                    19,17,WS_EX_TRANSPARENT
+    CONTROL         "Redo",IDC_REDO,"Button",BS_OWNERDRAW | WS_TABSTOP,20,0,
+                    19,17,WS_EX_TRANSPARENT
+    CONTROL         "Select and Link",IDC_BIND,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,46,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Unlink Selection",IDC_UNBIND,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,66,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Bind to Space Warp",IDC_WARPBIND,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,86,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Selection Dialog",IDC_SELECT_DIALOG,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,152,0,19,17,WS_EX_TRANSPARENT
+    CONTROL         "Window / Crossing",IDC_SELECT_CROSSING,"Button",
+                    BS_OWNERDRAW | BS_BITMAP | BS_FLAT | WS_TABSTOP,172,0,19,
+                    17,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_SELECT_TYPE,193,2,52,56,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Selection Mode",IDC_SELECT_MODE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,132,0,19,17,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_COORD_SYSTEM,315,2,52,56,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Center For Editing",IDC_EDIT_CENTER,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,370,0,19,17,WS_EX_TRANSPARENT
+END
+
+IDD_BOTTOMTOOLBAR DIALOGEX 0, 0, 676, 29
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Pan",IDC_PAN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,624,15,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Rotate",IDC_ROTATE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,640,15,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Zoom",IDC_ZOOM,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,608,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Min / Max Toggle",IDC_FOURVIEW,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,656,15,15,14,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_TRANSFORM_X,274,2,36,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,266,4,8,8
+    CONTROL         "Spin1",IDC_TRANSFORM_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,312,2,11,
+                    12
+    EDITTEXT        IDC_TRANSFORM_Z,394,2,36,12,ES_AUTOHSCROLL
+    LTEXT           "Z:",IDC_STATIC,386,4,8,8
+    CONTROL         "Spin1",IDC_TRANSFORM_Z_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,432,2,11,
+                    12
+    EDITTEXT        IDC_TRANSFORM_Y,334,2,36,12,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,326,4,8,8
+    CONTROL         "Spin1",IDC_TRANSFORM_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,372,2,11,
+                    12
+    CONTROL         "Absolute Mode Toggle",IDC_TRANSFORM_LOCAL,"Button",
+                    BS_OWNERDRAW | BS_BITMAP | WS_TABSTOP,245,0,15,14,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Field of View",IDC_FOV,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,608,15,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Zoom Extents",IDC_CENTER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,640,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Zoom Extents All",IDC_CENTER_ALL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,656,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Go to Start",IDC_START,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,521,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Set Key",IDC_SETKEY,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    451,0,31,29
+    CONTROL         "Previous Frame",IDC_PREVIOUS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,537,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Play / Stop Animation",IDC_PLAY,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,553,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Next Frame",IDC_NEXT,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    569,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Go to End",IDC_END,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    585,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Time Configuration",IDC_OPTIONS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,585,15,15,14,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_FRAME,537,15,47,14,ES_AUTOHSCROLL
+    CONTROL         "Key Mode Toggle",IDC_KEYMODE,"Button",BS_OWNERDRAW | 
+                    BS_BITMAP | BS_FLAT | WS_TABSTOP,521,15,15,14,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Auto Key",IDC_KEYMODE_AUTO,"Button",BS_OWNERDRAW | 
+                    BS_BITMAP | WS_TABSTOP,485,0,33,14
+    CONTROL         "Set Key",IDC_KEYMODE_SET,"Button",BS_OWNERDRAW | 
+                    BS_BITMAP | WS_TABSTOP,485,15,33,14
+    CONTROL         "Zoom All",IDC_ZOOM_ALL,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,624,0,15,14,WS_EX_TRANSPARENT
+    CONTROL         "Lock Selection",IDC_SELECTION_LOCK,"Button",
+                    BS_OWNERDRAW | BS_BITMAP | WS_TABSTOP,245,15,15,14,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_CREATE_GEOMETRY DIALOG DISCARDABLE  0, 0, 140, 55
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Simple Objects",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    CONTROL         "Box",IDC_CREATE_BOX,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,4,14,40,11
+    CONTROL         "Sphere",IDC_CREATE_SPHERE,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,4,27,40,11
+    CONTROL         "Geosphere",IDC_CREATE_GEOSPHERE,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,4,40,40,11
+    CONTROL         "Plane",IDC_CREATE_PLANE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,49,14,40,11
+    CONTROL         "Torus",IDC_CREATE_TORUS,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,49,27,40,11
+    CONTROL         "Pyramid",IDC_CREATE_PYRAMID,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,49,40,40,11
+    CONTROL         "Cylinder",IDC_CREATE_CYLINDER,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,95,14,40,11
+    CONTROL         "Tube",IDC_CREATE_TUBE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,95,27,40,11
+    CONTROL         "Cone",IDC_CREATE_CONE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,95,40,40,11
+END
+
+IDD_CREATE_PLANE DIALOG DISCARDABLE  0, 0, 140, 85
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Properties",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    CONTROL         "Create",IDC_CREATE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,106,69,30,12
+    GROUPBOX        "Tasselation: ",IDC_STATIC,4,14,64,41
+    LTEXT           "X:",IDC_STATIC,8,26,8,8
+    LTEXT           "Y:",IDC_STATIC,8,40,8,8
+    EDITTEXT        IDC_TASSELLATION_X,16,24,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_TASSELLATION_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,24,10,
+                    12
+    EDITTEXT        IDC_TASSELLATION_Y,16,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_TASSELLATION_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,54,38,10,
+                    12
+    GROUPBOX        "Dimensions: ",IDC_STATIC,71,14,64,41
+    LTEXT           "X:",IDC_STATIC,75,26,8,8
+    LTEXT           "Y:",IDC_STATIC,75,40,8,8
+    EDITTEXT        IDC_DIMENSION_X,83,24,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMENSION_X_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,24,
+                    10,12
+    EDITTEXT        IDC_DIMENSION_Y,83,38,36,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMENSION_Y_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,121,38,
+                    10,12
+    CONTROL         "Start in Center",IDC_CREATION_CENTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,79,59,58,8
+    CONTROL         "Create",IDC_CREATE_DATA,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,4,69,30,12
+    LTEXT           "Build from Data:",IDC_STATIC,4,59,51,8
+END
+
+IDD_SMOOTHING_GROUPS DIALOG DISCARDABLE  0, 0, 140, 91
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Smoothing Groups",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+    CONTROL         "1",IDC_SMOOTHING_GROUP_01,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,7,14,14,12
+    CONTROL         "2",IDC_SMOOTHING_GROUP_02,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,23,14,14,12
+    CONTROL         "3",IDC_SMOOTHING_GROUP_03,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,39,14,14,12
+    CONTROL         "4",IDC_SMOOTHING_GROUP_04,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,55,14,14,12
+    CONTROL         "5",IDC_SMOOTHING_GROUP_05,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,71,14,14,12
+    CONTROL         "6",IDC_SMOOTHING_GROUP_06,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,87,14,14,12
+    CONTROL         "7",IDC_SMOOTHING_GROUP_07,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,103,14,14,12
+    CONTROL         "8",IDC_SMOOTHING_GROUP_08,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,119,14,14,12
+    CONTROL         "9",IDC_SMOOTHING_GROUP_09,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,7,28,14,12
+    CONTROL         "10",IDC_SMOOTHING_GROUP_10,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,23,28,14,12
+    CONTROL         "11",IDC_SMOOTHING_GROUP_11,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,39,28,14,12
+    CONTROL         "12",IDC_SMOOTHING_GROUP_12,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,55,28,14,12
+    CONTROL         "13",IDC_SMOOTHING_GROUP_13,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,71,28,14,12
+    CONTROL         "14",IDC_SMOOTHING_GROUP_14,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,87,28,14,12
+    CONTROL         "15",IDC_SMOOTHING_GROUP_15,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,103,28,14,12
+    CONTROL         "16",IDC_SMOOTHING_GROUP_16,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,119,28,14,12
+    CONTROL         "17",IDC_SMOOTHING_GROUP_17,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,7,43,14,12
+    CONTROL         "18",IDC_SMOOTHING_GROUP_18,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,23,43,14,12
+    CONTROL         "19",IDC_SMOOTHING_GROUP_19,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,39,43,14,12
+    CONTROL         "20",IDC_SMOOTHING_GROUP_20,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,55,43,14,12
+    CONTROL         "21",IDC_SMOOTHING_GROUP_21,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,71,43,14,12
+    CONTROL         "22",IDC_SMOOTHING_GROUP_22,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,87,43,14,12
+    CONTROL         "23",IDC_SMOOTHING_GROUP_23,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,103,43,14,12
+    CONTROL         "24",IDC_SMOOTHING_GROUP_24,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,119,43,14,12
+    CONTROL         "25",IDC_SMOOTHING_GROUP_25,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,7,58,14,12
+    CONTROL         "26",IDC_SMOOTHING_GROUP_26,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,23,58,14,12
+    CONTROL         "27",IDC_SMOOTHING_GROUP_27,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,39,58,14,12
+    CONTROL         "28",IDC_SMOOTHING_GROUP_28,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,55,58,14,12
+    CONTROL         "29",IDC_SMOOTHING_GROUP_29,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,71,58,14,12
+    CONTROL         "30",IDC_SMOOTHING_GROUP_30,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,87,58,14,12
+    CONTROL         "31",IDC_SMOOTHING_GROUP_31,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,103,58,14,12
+    CONTROL         "32",IDC_SMOOTHING_GROUP_32,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,119,58,14,12
+    CONTROL         "Auto",IDC_SMOOTHING_AUTO,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,4,75,29,11
+END
+
+IDD_COMPONENT_MANAGER DIALOGEX 0, 0, 315, 218
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Component Manager"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_TABSTOP,3,12,139,155,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Added Components:",IDC_STATIC,3,3,65,8
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    WS_TABSTOP,168,12,144,154,WS_EX_CLIENTEDGE
+    CONTROL         "<<",IDC_COMPONENT_ADD,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,147,71,16,14
+    CONTROL         ">>",IDC_COMPONENT_REMOVE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,147,88,16,14
+    LTEXT           "Available Components:",IDC_STATIC,168,3,73,8
+    EDITTEXT        IDC_FILE_TYPE,58,181,17,12,ES_LOWERCASE | ES_AUTOHSCROLL
+    CONTROL         "Load",IDC_FILE_LOAD,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    256,173,26,12
+    GROUPBOX        "Options:",IDC_STATIC,3,170,247,45
+    LTEXT           "File Extension:",IDC_STATIC,10,183,46,8
+    CONTROL         "Write raw data",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,199,59,10
+    CONTROL         "Save",IDC_FILE_SAVE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    256,187,26,12
+    CONTROL         "New",IDC_FILE_NEW,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    256,201,26,12
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,286,173,26,
+                    12
+    CONTROL         "Cancel",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,286,
+                    187,26,12
+END
+
+IDD_SELECT DIALOG DISCARDABLE  0, 0, 272, 217
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Objects"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Select",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,183,196,
+                    34,14
+    CONTROL         "Cancel",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,225,
+                    196,34,14
+    GROUPBOX        "Sort",IDC_STATIC,177,4,88,53
+    CONTROL         "Alphabetical",IDC_SORT_ABC,"Button",BS_AUTORADIOBUTTON,
+                    193,14,55,10
+    CONTROL         "By Type",IDC_SORT_TYPE,"Button",BS_AUTORADIOBUTTON,193,
+                    24,42,10
+    CONTROL         "By Color",IDC_SORT_COLOR,"Button",BS_AUTORADIOBUTTON,
+                    193,34,42,10
+    CONTROL         "By Size",IDC_SORT_SIZE,"Button",BS_AUTORADIOBUTTON,193,
+                    43,39,10
+    GROUPBOX        "List Types",IDC_STATIC,177,59,88,100
+    CONTROL         "Geometry",IDC_LIST_GEOMETRY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,69,46,10
+    CONTROL         "Shapes",IDC_LIST_SHAPES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,80,40,10
+    CONTROL         "Lights",IDC_LIST_LIGHTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,91,35,10
+    CONTROL         "Cameras",IDC_LIST_CAMERAS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,102,43,10
+    CONTROL         "Helpers",IDC_LIST_HELPERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,112,40,10
+    CONTROL         "Space Warps",IDC_LIST_WARPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,123,59,10
+    CONTROL         "Groups",IDC_LIST_GROUPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,134,39,10
+    CONTROL         "Bone Objects",IDC_LIST_BONES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,182,145,59,10
+    CONTROL         "All",IDC_LIST_ALL,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    228,69,30,11
+    CONTROL         "None",IDC_LIST_NONE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    228,82,30,11
+    CONTROL         "Invert",IDC_LIST_INVERT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,228,95,30,11
+    GROUPBOX        "Selection Sets",IDC_STATIC,177,161,88,30
+    COMBOBOX        IDC_SELECTION_SETS,182,172,79,71,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "All",IDC_SELECT_ALL,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    14,186,38,12
+    CONTROL         "None",IDC_SELECT_NONE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,68,186,38,12
+    CONTROL         "Invert",IDC_SELECT_INVERT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,123,186,38,12
+    CONTROL         "Display Subtree",IDC_DISPLAY_SUBTREE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,204,65,10
+    CONTROL         "Case Sensitive",IDC_CASE_SENSITIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,91,204,63,10
+    EDITTEXT        IDC_SELECTION_SEARCH,5,7,166,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_SELECTION_LIST,5,21,166,170,LBS_SORT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MATERIAL_EDITOR DIALOG DISCARDABLE  0, 0, 238, 172
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Custom1",IDC_MATERIAL_PREVIEW,"",WS_TABSTOP,5,5,196,124
+END
+
+IDD_CREATE DIALOG DISCARDABLE  0, 0, 140, 33
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Geometry",IDC_CREATE_GEOMETRY,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,5,16,36,12
+    CONTROL         "Lights",IDC_CREATE_LIGHTS,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,75,16,26,12
+    CONTROL         "Shapes",IDC_CREATE_SHAPES,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,43,16,30,12
+    CONTROL         "Helpers",IDC_CREATE_HELPERS,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,103,16,32,12
+    CONTROL         "Categories",IDC_GROUPBUTTON,"Button",BS_OWNERDRAW | 
+                    BS_NOTIFY | WS_TABSTOP,4,1,131,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_TOOL_MOVE           CURSOR  DISCARDABLE     "Data/System/Tool_move.cur"
+IDC_TOOL_NONE           CURSOR  DISCARDABLE     "Data/System/Tool_none.cur"
+IDC_TOOL_DRAG           CURSOR  DISCARDABLE     "Data/System/Tool_drag.cur"
+IDC_TOOL_ROTATE         CURSOR  DISCARDABLE     "Data/System/Tool_rotate.cur"
+IDC_TOOL_FOV            CURSOR  DISCARDABLE     "Data/System/Tool_fov.cur"
+IDC_TOOL_SELECT         CURSOR  DISCARDABLE     "Data/System/Tool_select.cur"
+IDC_TOOL_ROLL           CURSOR  DISCARDABLE     "Data/System/Tool_roll.cur"
+IDC_TOOL_DOLLY          CURSOR  DISCARDABLE     "Data/System/Tool_dolly.cur"
+IDC_TOOL_ZOOM           CURSOR  DISCARDABLE     "Data/System/Tool_zoom.cur"
+IDC_TOOL_SCALE          CURSOR  DISCARDABLE     "Data/System/Tool_Scale.cur"
+IDC_TOOL_ZOOM_ALL       CURSOR  DISCARDABLE     "Data/System/Tool_zoomall.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SHADOW              ICON    DISCARDABLE     "Data/System/Shadow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 161
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_CREATE_BOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_OBJECT_COLOR, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_CREATE_PLANE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_COMPONENT_MANAGER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 312
+    END
+
+    IDD_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 271
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 216
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_AUTHOR              BITMAP  DISCARDABLE     "Data\\System\\Author.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "Data\\System\\Logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "E",            IDM_FILE_EXPORT,        VIRTKEY, CONTROL, NOINVERT
+    "I",            IDM_FILE_IMPORT,        VIRTKEY, CONTROL, NOINVERT
+    "L",            IDM_FILE_LOAD,          VIRTKEY, CONTROL, NOINVERT
+    "N",            IDM_FILE_NEW,           VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_FILE_SAVE,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILE_LOAD           "Load a File"
+    IDS_FILE_SAVE           "Save to Current File"
+    IDS_FILE_SAVE_NEW       "Save to a New File"
+    IDS_ABOUT               "About the Program"
+    IDS_FILE_NEW            "Create a new File"
+    IDS_APP_VERSION         "0.720b"
+    IDS_APP_TITLE           "Shadow Studio (beta)"
+    IDS_APP_NAME            "Shadow Studio"
+END
+
+#endif    // Slovak resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
