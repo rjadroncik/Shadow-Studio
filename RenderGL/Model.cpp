@@ -6,7 +6,7 @@
 #include "Model.h"
 #include "Box.h"
 #include "Plane.h"
-#include "../../System/Math.h"
+#include "../Math.h"
 
 extern CMath Math;
 
@@ -194,7 +194,7 @@ void CModel::UpdateExtents()
 		{
 			Math.DataToVector3( &TempVector, &Mesh.pObject[n].pVertex[m * 3] );
 
-			Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &TempVector, &CurrentVertex );
+			Math.MultiplyMatrix4Vector3((Matrix4*)&ModelMatrix[0], &TempVector, &CurrentVertex);
 			
 			if( CurrentVertex[0] < LowExtent[0] ) { LowExtent[0] = CurrentVertex[0]; }
 			if( CurrentVertex[1] < LowExtent[1] ) { LowExtent[1] = CurrentVertex[1]; }

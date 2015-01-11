@@ -4,8 +4,8 @@
 
 #include "stdafx.h"
 #include "Mesh.h"
-#include "../../System/Math.h"
-#include "../../System/ImgLoad.h"
+#include "../Math.h"
+#include "../ImgLoad.h"
 #include "Assert.h"
 
 extern CMath Math;
@@ -262,14 +262,14 @@ void CMesh::SetObjectTexture( WORD index, LPSTR textureFile )
 		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP );		// nastavuje za textury sa v smere u (vodorovnom) neopakuju
 		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP );		// nastavuje za textury sa v smere v (zvislom) neopakuju
 
-		gluBuild2DMipmaps( GL_TEXTURE_2D, GL_RGB8, pImage->Width, pImage->Height, GL_RGB, GL_UNSIGNED_BYTE, pImage->Data );
+		gluBuild2DMipmaps( GL_TEXTURE_2D, GL_RGB8, pImage->Width, pImage->Height, GL_RGB, GL_UNSIGNED_BYTE, pImage->pData );
 	}
 	else { MessageBox( NULL, "OpenGL couldn't Create a Texture !", textureFile, MB_ICONERROR ); }
 
 //Vacuum Cleaning
 	if( pImage )
 	{
-		if( pImage->Data ) { free( pImage->Data ); }
+		if( pImage->pData ) { free( pImage->pData ); }
 		free( pImage );								
 	}
 

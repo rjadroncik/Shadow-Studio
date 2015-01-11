@@ -10,8 +10,7 @@
 #include "Afc.h"
 
 #include "Resource.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Math.h"
 
 extern CState				State; 
 extern COptions				Options; 
@@ -406,7 +405,7 @@ void CSystem::ResizeWindowMain()
 		EnlargeView( ViewActive );	
 	}
 
-	Math.AdjustDimension( Dimension );
+	//TODO: Math.AdjustDimension( Dimension );
 }
 
 void CSystem::EnlargeView( UINT index )

@@ -11,7 +11,7 @@
 #include "AFC.h"
 #include "ViewUI.h"
 
-#include "../System/Math.h"
+#include "Math.h"
 
 #include "RenderGL/Scene.h" 
 //#include "RenderGL/Model.h" 
@@ -944,73 +944,76 @@ bool CSelection::BoxInRegion( Float3 *size, bool selectIntersecting )
 
 bool CSelection::ObjectAtCursor( tObject *pobject )
 {
-	for( UINT n = 0; n < pobject->VertexCount; n++ )
-	{
-		Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
-
-		Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
-	}
-
-//Calculate Triangle x Cursor Vector
-	for( UINT p = 0; p < pobject->TriangleCount; p++ )
-	{
-		if( Math.VectorTriangleCrossPoint( &State.Mouse[1].StartPoint3D, &State.Mouse[1].EndPoint3D, &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], NULL ) ) { return TRUE; }
-	}
+//TODO: ObjectAtCursor
+//	for( UINT n = 0; n < pobject->VertexCount; n++ )
+//	{
+//		Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
+//
+//		Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
+//	}
+//
+////Calculate Triangle x Cursor Vector
+//	for( UINT p = 0; p < pobject->TriangleCount; p++ )
+//	{
+//		if( Math.VectorTriangleCrossPoint( &State.Mouse[1].StartPoint3D, &State.Mouse[1].EndPoint3D, &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], NULL ) ) { return TRUE; }
+//	}
 
 	return FALSE;
 }
 
 bool CSelection::ObjectInRegion( tObject *pobject, bool selectIntersecting )
 {
-	if( selectIntersecting )
-	{
-	//Select if Any Vertex In Region
-		for( UINT n = 0; n < pobject->VertexCount; n++ )
-		{
-			Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
+	//TODO: ObjectInRegion
 
-			Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
+	//if( selectIntersecting )
+	//{
+	////Select if Any Vertex In Region
+	//	for( UINT n = 0; n < pobject->VertexCount; n++ )
+	//	{
+	//		Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
 
-			if( PointInRegion( &pVertex[n] ) ) { return TRUE; }
-		}
+	//		Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
 
-	//Calculate Triangle / Selection Volume Intersection
-		if( State.View.Type == VT_PERSPECTIVE ) 
-		{
-			for( UINT p = 0; p < pobject->TriangleCount; p++ )
-			{
-				for( UINT r = 0; r < ActivePoints - 1; r++ )
-				{
-					if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &State.View.Position, &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
-				}
-			}
-		}
-		else
-		{
-			for( UINT p = 0; p < pobject->TriangleCount; p++ )
-			{
-				for( UINT r = 0; r < ActivePoints - 1; r++ )
-				{
-					if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &pPointReflected[r], &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
-					if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &pPointReflected[r + 1], &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
-				}
-			}
-		}
-	}
-	else
-	{
-	//Select if All Vertices In Region
-		for( UINT n = 0; n < pobject->VertexCount; n++ )
-		{
-			Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
+	//		if( PointInRegion( &pVertex[n] ) ) { return TRUE; }
+	//	}
 
-			Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
+	////Calculate Triangle / Selection Volume Intersection
+	//	if( State.View.Type == VT_PERSPECTIVE ) 
+	//	{
+	//		for( UINT p = 0; p < pobject->TriangleCount; p++ )
+	//		{
+	//			for( UINT r = 0; r < ActivePoints - 1; r++ )
+	//			{
+	//				if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &State.View.Position, &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
+	//			}
+	//		}
+	//	}
+	//	else
+	//	{
+	//		for( UINT p = 0; p < pobject->TriangleCount; p++ )
+	//		{
+	//			for( UINT r = 0; r < ActivePoints - 1; r++ )
+	//			{
+	//				if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &pPointReflected[r], &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
+	//				if( Math.TrianglesIntersect( &pVertex[pobject->pTriangleIndice[p * 3]], &pVertex[pobject->pTriangleIndice[p * 3 + 1]], &pVertex[pobject->pTriangleIndice[p * 3 + 2]], &pPointReflected[r + 1], &pPoint[r], &pPoint[r + 1] ) ) { return TRUE; }
+	//			}
+	//		}
+	//	}
+	//}
+	//else
+	//{
+	////Select if All Vertices In Region
+	//	for( UINT n = 0; n < pobject->VertexCount; n++ )
+	//	{
+	//		Math.DataToVector3( &State.TempVector3e, &pobject->pVertex[n * 3] );
 
-			if( !PointInRegion( &pVertex[n] ) ) { return FALSE; }
-		}
+	//		Math.MultiplyMatrix4Vector3( &ModelMatrix[0], &State.TempVector3e, &pVertex[n] );
 
-		return TRUE;
-	}
+	//		if( !PointInRegion( &pVertex[n] ) ) { return FALSE; }
+	//	}
+
+	//	return TRUE;
+	//}
 
 	return FALSE;
 }

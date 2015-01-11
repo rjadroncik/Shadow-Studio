@@ -19,9 +19,8 @@
 #include "ViewHandler.h"
 
 //Common Include Files
-#include "../System/Timer.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Timer.h"
+#include "Math.h"
 
 extern CState				State; 
 extern COptions				Options; 
@@ -77,7 +76,7 @@ void CSelectHandler::UpdateRegion( bool draw )
 	//Prepare Variables
 		State.TempValue1 = -6.283185307179f / (float)( State.RegionPointCount - 1 );
 		State.TempValue2 = 0; 
-		State.TempValue3 = (float)sqrt( ( State.Mouse[1].Pos2D.x - State.Mouse[0].Pos2D.x ) * ( State.Mouse[1].Pos2D.x - State.Mouse[0].Pos2D.x ) + ( State.Mouse[1].Pos2D.y - State.Mouse[0].Pos2D.y ) * ( State.Mouse[1].Pos2D.y - State.Mouse[0].Pos2D.y ) );
+		State.TempValue3 = sqrt((float)((State.Mouse[1].Pos2D.x - State.Mouse[0].Pos2D.x) * (State.Mouse[1].Pos2D.x - State.Mouse[0].Pos2D.x) + (State.Mouse[1].Pos2D.y - State.Mouse[0].Pos2D.y) * (State.Mouse[1].Pos2D.y - State.Mouse[0].Pos2D.y)));
 
 	//Create Circle
 		for( UINT n = 0; n < State.RegionPointCount; n++ )

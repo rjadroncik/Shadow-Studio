@@ -12,8 +12,7 @@
 #include <SCFMathematics.h>
 using namespace SCFMathematics;
 
-#include "../../System/FontGL.h"
-
+#include "FontGL.h"
 
 #include "../ModifierStack.h"
 

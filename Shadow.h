@@ -7,8 +7,8 @@
 #include "Afc.h"
 
 //Common Include Files
-#include "../System/Timer.h"
-#include "../System/Math.h"
+#include "Timer.h"
+#include "Math.h"
 
 //RenderGL.dll Includes
 #include "RenderGL/RenderGL.h"

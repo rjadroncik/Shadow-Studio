@@ -9,7 +9,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "../System/FontGL.h"
+#include "RenderGL/FontGL.h"
 #include "View.h"
 #include "Selection.h"
 

@@ -12,8 +12,7 @@
 #include "Afc.h"
 
 #include "Resource.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Math.h"
 
 extern CState				State; 
 extern COptions				Options; 
@@ -903,7 +902,7 @@ void CView::RePosition( float x, float y, float z, bool useFocus )
 {
 	if( useFocus )
 	{
-		Math.SubstractVectors3( &Position, &Focus, &State.TempVector3a );
+		Math.SubtractVectors3( &Position, &Focus, &State.TempVector3a );
 		
 		Focus[0] = x;
 		Focus[1] = y;
@@ -913,7 +912,7 @@ void CView::RePosition( float x, float y, float z, bool useFocus )
 	}
 	else
 	{
-		Math.SubstractVectors3( &Focus, &Position, &State.TempVector3a );
+		Math.SubtractVectors3( &Focus, &Position, &State.TempVector3a );
 		
 		Position[0] = x;
 		Position[1] = y;

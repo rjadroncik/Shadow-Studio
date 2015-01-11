@@ -16,9 +16,8 @@
 
 
 //Common Include Files
-#include "../System/Timer.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Timer.h"
+#include "Math.h"
 
 #include "RenderGL/3sfFile.h"
 #include "RenderGL/2smFile.h"

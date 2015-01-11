@@ -20,9 +20,8 @@
 #include "CreateHandler.h"
 
 //Common Include Files
-#include "../System/Timer.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Timer.h"
+#include "Math.h"
 
 extern CState				State; 
 extern COptions				Options; 
@@ -75,8 +74,10 @@ bool CState::RollbackTool()
 
 bool CState::UpdateMousePos3D( UINT index, Float4* plane )
 {
+	//TODO: UpdateMousePos3D
+
 //Update Crosspoint
-	if( Math.VectorPlaneCrossPoint( &Mouse[index].StartPoint3D, &Mouse[index].EndPoint3D, plane, &Mouse[index].Pos3D ) ) { return TRUE; }
+	//if( Math.VectorPlaneCrossPoint( &Mouse[index].StartPoint3D, &Mouse[index].EndPoint3D, plane, &Mouse[index].Pos3D ) ) { return TRUE; }
 
 	return FALSE;
 }
@@ -181,7 +182,7 @@ void CState::UpdateTransforms( Float3 *pdata )
 		}
 		else
 		{
-			Math.SubstractVectors3( pdata, &System.Selection.GizmoPosition, &TempVector3d );
+			Math.SubtractVectors3( pdata, &System.Selection.GizmoPosition, &TempVector3d );
 		}
 
 		Math.AddVectors3( &System.Selection.GizmoPosition, &TempVector3d, &System.Selection.GizmoPosition );

@@ -23,9 +23,8 @@
 #include "SelectHandler.h"
 
 //Common Include Files
-#include "../System/Timer.h"
-#include "../System/Math.h"
-#include "../System/JPEGlib.h"
+#include "Timer.h"
+#include "Math.h"
 
 extern CState				State; 
 extern COptions				Options; 

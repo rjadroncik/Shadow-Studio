@@ -40,7 +40,7 @@ using namespace SCFMathematics;
 
 #define DEFAULT_FONT_SIZE 16
 
-// TODO: reference additional headers your program requires here
+// reference additional headers your program requires here
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
