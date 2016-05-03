@@ -45,7 +45,7 @@ public:
 	virtual ~CState();
 
 	void		UpdateMouse( UINT index, POINT position );
-	bool		UpdateMousePos3D( UINT index, Float4* plane );
+	bool		UpdateMousePos3D( UINT index, const Float4* plane );
 
 	bool		RollbackTool();
 	void		SetToolInfo( UINT index, HWND hButton );

@@ -38,6 +38,7 @@ extern AToolBar				BottomToolBar;
 extern CViewHandler			ViewHandler;
 extern CCreateHandler		CreateHandler;
 
+using namespace SCFMathematics;
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -72,12 +73,10 @@ bool CState::RollbackTool()
 	return FALSE;
 }
 
-bool CState::UpdateMousePos3D( UINT index, Float4* plane )
+bool CState::UpdateMousePos3D( UINT index, const Float4* plane )
 {
-	//TODO: UpdateMousePos3D
-
-//Update Crosspoint
-	//if( Math.VectorPlaneCrossPoint( &Mouse[index].StartPoint3D, &Mouse[index].EndPoint3D, plane, &Mouse[index].Pos3D ) ) { return TRUE; }
+	//Update Crosspoint
+	if  (CrossPointVectorPlane(Mouse[index].StartPoint3D, Mouse[index].EndPoint3D, *plane, Mouse[index].Pos3D)) { return TRUE; }
 
 	return FALSE;
 }
