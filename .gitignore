@@ -4,3 +4,4 @@ ipch
 *.sdf
 *.tlog
 *.opensdf
+/Shadow.VC.db
