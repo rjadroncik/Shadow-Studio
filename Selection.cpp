@@ -954,7 +954,7 @@ bool CSelection::ObjectAtCursor( tObject *pobject )
 	//Calculate Triangle x Cursor Vector
 	for( UINT p = 0; p < pobject->TriangleCount; p++ )
 	{
-		if (CrossPointVectorTriangleExists(State.Mouse[1].StartPoint3D, State.Mouse[1].EndPoint3D, pVertex[pobject->pTriangleIndice[p * 3]], pVertex[pobject->pTriangleIndice[p * 3 + 1]], pVertex[pobject->pTriangleIndice[p * 3 + 2]])) { return TRUE; }
+		//if (CrossPointVectorTriangleExists(State.Mouse[1].StartPoint3D, State.Mouse[1].EndPoint3D, pVertex[pobject->pTriangleIndice[p * 3]], pVertex[pobject->pTriangleIndice[p * 3 + 1]], pVertex[pobject->pTriangleIndice[p * 3 + 2]])) { return TRUE; }
 	}
 
 	return FALSE;
